@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My page</title>
+    <link rel="stylesheet" href="styles.css">
+</html>
+<body class="">
+
+    <!-- Sidebar begins here -->
+    <div class="container">
+        <aside class="sidebar">
+            <img src="testing.jpg">
+            <h3>Otetumo Oluwaseun</h3>
+            <p>Software Engineer</p>
+            <ul>
+                <li>
+                    <a href="#bio" class="active nav_menu">Bio</a>
+                </li>
+                <li>
+                    <a href="#pitch" class="active nav_menu">Elevator Pitch</a>
+                </li>
+                <li>
+                    <a href="#" class="active nav_menu">Portfolio</a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- The bio page -->
+        <div class="page bio">
+            <h1 id="bio_name">Oluwaseun <span class="brick red"> Otetumo</span></h1>
+           <div class="type-out">
+                <p class="mybio" id="myBio"> </p>
+           </div>
+        </div>
+    </div>
+    <script>
+    //    var i = 0;
+    //    var txt = document.getElementById("myBio");
+    //    var text = txt.innerHTML;
+    //    var arrL = text[0].length;
+    //    var speed = 50;
+    //    var scroll = 20;
+    //    var txtPos = 0;
+    //    var contents = '';
+    //    var row;
+        
+    //    function typeWriter() {
+    //     contents;
+    //     row = Math.max(0, i - scroll);
+    //     var destination = document.getElementById("myBio");
+    //     while (row <br i){
+    //         contents += text[row++] + '<br />';
+    //     }
+    //     destination.innerHTML = contents + text[i].substring(0, txtPos) + "_";
+    //     if (txtPos++ == arrL) {
+    //         txtPos = 0;
+    //         i++;
+    //         if (i != text.length) {
+    //             arrL = text[i].length;
+    //             setTimeout("typeWriter()", 500)
+    //         }
+    //     } else {
+    //         setTimeout("typeWriter()", speed);
+    //     }
+    //    }
+
+
+    var i = 0;
+    var oro = 'Oluwaseun Otetumo is an entry-level software engineer who has a passion for building user-friendly software that solves real-world problems .He is currently part of the backend team of the Impacter startup company that provides technological solutions to real-life problems including agriculture. His goal is to be among the leading software engineer in Africa. He aspires to become a senior Developer who would be leading and inspiring young minds.'
+var txt = document.getElementById("myBio").innerHTML; /* The text */
+var speed = 50; /* The speed/duration of the effect in milliseconds */
+
+function typeWriter() {
+  if (i < oro.length) {
+    document.getElementById("myBio").innerHTML += oro.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+       typeWriter();
+    </script>
+</body>

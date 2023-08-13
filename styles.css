@@ -1,0 +1,126 @@
+*{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+body{
+    background: navajowhite;
+}
+
+/* Sidebar container styling */
+.sidebar{
+    background-color: rgb(189, 93, 56);
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    padding: 20px 0;
+}
+
+/* Image in side bar */
+img{
+    display: block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 50px auto 0;
+}
+
+/* the name below sidebar pic */
+h3{
+    color: #ffffff;
+    text-align: center;
+    margin: 10px auto 5px;
+}
+
+/* the title below the name at sidebar */
+.sidebar p{
+    color: rgb(206, 240, 253);
+    text-align: center;
+    font-size: 16px;
+}
+
+/* The lists of bio, pitch and elevator */
+.sidebar ul li{
+    display: flex;
+    align-items: center;
+}
+
+/* the anchor tag that links the bio, pitch and elevator */
+.sidebar ul li a{
+    margin: 10px auto;
+    padding: 13px 30px;
+    border-bottom: 1px solid #10558d;
+    color: rgb(241, 237, 237);
+    font-size: 16px;
+    position: relative;
+}
+
+/* sidebar anchor tags hovering */
+.sidebar ul li a:hover , .sidebar ul li a:active{
+    color: black;
+    background-color: #FAF9F6;
+}
+
+
+/* Bio page styling */
+.page{
+    width: calc(100% -250px);
+    margin-left: 250px;
+    display: inline-block;
+    padding: 5rem 1rem;
+    max-width: 75rem;
+}
+
+/* Bio h3 tag */
+#bio_name{
+    text-align: center;
+    display: flex;
+    text-transform: uppercase;
+    font-size: calc(1rem + 4.5vw);
+}
+
+/* Bio h3 span element */
+.brick{
+    text-transform: uppercase;
+    font-size: calc(1rem + 4.5vw);
+    color: rgb(189, 93, 56);
+}
+
+.type-out{
+    overflow: hidden;
+    font-size: 1.6rem;
+    width: 100%;
+}
+
+
+/* Bio paragraph */
+.mybio{
+    display: inline;
+    text-align: center;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: calc(0.7rem + 1.5vw);
+    color: #37BCDB;
+    overflow: hidden;
+}
+/* On screens that are less than 700px wide, make the sidebars topbars */
+@media only screen and (max-width: 700px){
+    .sidebar{ 
+    width: 100%;
+    height: auto;
+    position: relative;
+    }
+    .sidebar a {float: left;}
+    .page{margin-left: 0;}
+}
+
+/* On screens that are less than 400px */
+@media screen and (max-width: 400px) {
+    .sidebar a {
+      text-align: center;
+      float: none;
+    }
+  }
+   
