@@ -10,65 +10,76 @@
 
     <!-- Sidebar begins here -->
     <div class="container">
-        <aside class="sidebar">
+        <aside class="sidebar" id="sidebar">
             <img src="testing.jpg">
             <h3>Otetumo Oluwaseun</h3>
             <p>Software Engineer</p>
             <ul>
                 <li>
-                    <a href="#bio" class="active nav_menu">Bio</a>
+                    <a href="#bio" class="active nav_menu" id="brown">Bio</a>
                 </li>
                 <li>
-                    <a href="#pitch" class="active nav_menu">Elevator Pitch</a>
+                    <a href="#pitch" class="active nav_menu" id="blue">Elevator Pitch</a>
                 </li>
                 <li>
-                    <a href="#" class="active nav_menu">Portfolio</a>
+                    <a href="#portfolio" class="active nav_menu" id="green">Portfolio</a>
                 </li>
             </ul>
         </aside>
 
         <!-- The bio page -->
-        <div class="page bio">
+        <div class="page bio" id="bio">
             <h1 id="bio_name">Oluwaseun <span class="brick red"> Otetumo</span></h1>
            <div class="type-out">
                 <p class="mybio" id="myBio"> </p>
            </div>
         </div>
+
+        <!-- Elevator pitch page -->
+        <div class="pitch" id="pitch">
+            <h1 class="elev">View My Elevator Pitch</h1>
+            <div class="text">
+                <p>Hi, I am Oluwaseun Otetumo. I am an entry-level Software Engineer with a passion for building innovative and user-friendly software. 
+
+                    I am proficient in a variety of programming languages including C programming and Javascript.
+                    
+                    I am a result oriented software engineer with a  passion for solving complex problems. I have a track record of delivering high quality software on time and within budget.
+                    
+                    I am a quick learner and I am always eager to take on new challenges. I am also a team player and always willing to help others.
+                    
+                    I am looking for an entry-level software engineering position where I can use my skills and knowledge to make positive impact.
+                     I am confident I can be a valuable asset to your team.  
+                    </p>
+            </div>
+        </div>
+
+        <!-- Portfolio page -->
+
+        <div class="portfolio" id="portfolio">
+            <h1>Welcome to My Gallery</h1>
+            <div class="port_grid">
+                <div class="grid">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/P0pYzEGjCEs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <blockquote>Tomatrade is a trading app where</blockquote>        
+                    <blockquote>Farmers and buyers of Tomato and other </blockquote>
+                    <blockquote>Agricultural products meet and transact.</blockquote>
+                            
+                </div>
+                <div class="grid">
+                    <video href="https://youtu.be/P0pYzEGjCEs">Watch This</video>
+                </div>
+                <div class="grid">
+                    <a href="https://youtu.be/P0pYzEGjCEs">Watch This</a>
+                </div>
+            </div>
+        </div>
     </div>
     <script>
-    //    var i = 0;
-    //    var txt = document.getElementById("myBio");
-    //    var text = txt.innerHTML;
-    //    var arrL = text[0].length;
-    //    var speed = 50;
-    //    var scroll = 20;
-    //    var txtPos = 0;
-    //    var contents = '';
-    //    var row;
-        
-    //    function typeWriter() {
-    //     contents;
-    //     row = Math.max(0, i - scroll);
-    //     var destination = document.getElementById("myBio");
-    //     while (row <br i){
-    //         contents += text[row++] + '<br />';
-    //     }
-    //     destination.innerHTML = contents + text[i].substring(0, txtPos) + "_";
-    //     if (txtPos++ == arrL) {
-    //         txtPos = 0;
-    //         i++;
-    //         if (i != text.length) {
-    //             arrL = text[i].length;
-    //             setTimeout("typeWriter()", 500)
-    //         }
-    //     } else {
-    //         setTimeout("typeWriter()", speed);
-    //     }
-    //    }
+    //  
 
 
     var i = 0;
-    var oro = 'Oluwaseun Otetumo is an entry-level software engineer who has a passion for building user-friendly software that solves real-world problems .He is currently part of the backend team of the Impacter startup company that provides technological solutions to real-life problems including agriculture. His goal is to be among the leading software engineer in Africa. He aspires to become a senior Developer who would be leading and inspiring young minds.'
+    var oro = 'Oluwaseun Otetumo is an entry-level software engineer who has a passion for building user-friendly softwares that solve real-world problems .He is currently part of the backend team of the Impacter startup company that provide technological solutions to real-life problems including agriculture. His goal is to be among the leading software engineers in Africa. He aspires to become a senior Developer who would be leading and inspiring young minds.'
 var txt = document.getElementById("myBio").innerHTML; /* The text */
 var speed = 50; /* The speed/duration of the effect in milliseconds */
 
@@ -80,5 +91,23 @@ function typeWriter() {
   }
 }
        typeWriter();
+    var brown, blue, green;
+    brown = document.getElementById('brown'), blue = document.getElementById('blue'), green = document.getElementById('green');
+    blue.addEventListener('click', function onClick(event) {
+        var sidebar = document.getElementById('sidebar');
+
+        sidebar.style.backgroundColor = '#10558d';
+    });
+    brown.addEventListener('click', function onClick(event) {
+        var sidebar = document.getElementById('sidebar');
+
+        sidebar.style.backgroundColor = 'rgb(189, 93, 56)';
+    });
+
+    green.addEventListener('click', function onClick(event) {
+        var sidebar = document.getElementById('sidebar');
+
+        sidebar.style.backgroundColor = '#29bdc1';
+    });
     </script>
 </body>

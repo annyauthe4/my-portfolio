@@ -6,6 +6,9 @@
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     background: #f3f3f3;
 }
@@ -68,18 +71,23 @@ h3{
 /* Bio page styling */
 .page{
     width: calc(100% -250px);
+    height: 100vh;
     margin-left: 250px;
     display: inline-block;
     padding: 5rem 1rem;
     max-width: 75rem;
+    background-image: url('https://codetheweb.blog/assets/img/posts/css-advanced-background-images/mountains.jpg');
 }
 
 /* Bio h3 tag */
 #bio_name{
     text-align: center;
     display: flex;
+    gap: 30px;
+    margin-left: 50px;
     text-transform: uppercase;
     font-size: calc(1rem + 4.5vw);
+    margin-top: 0;
 }
 
 /* Bio h3 span element */
@@ -90,21 +98,94 @@ h3{
 }
 
 .type-out{
-    overflow: hidden;
     font-size: 1.6rem;
     width: 100%;
+    margin: 0 auto;
+    padding: 50px;
 }
 
 
 /* Bio paragraph */
 .mybio{
-    display: inline;
-    text-align: center;
-    font-family: 'Trebuchet MS', sans-serif;
+    font-family: 'Raleway';
     font-size: calc(0.7rem + 1.5vw);
-    color: #37BCDB;
-    overflow: hidden;
+    text-shadow: 2px 2px rgb(237, 115, 71);
+    color: white;
 }
+
+/* The pitch page */
+.pitch{
+    width: calc(100% -250px);
+    height: 100vh;
+    margin-left: 250px;
+    background-color: #5858d3;
+    opacity: 0.6;
+    background-size: 10px 10px; 
+    background-image: url("images/sunset.png");
+}
+.text{
+    width: 60%;
+    height: 50%;
+    margin: 0 auto;
+    background-color: #4D8076;
+}
+.text p{
+    font-family: Comic Sans MS, cursive;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #000000;
+    padding: 20px;
+    margin-bottom: 10px;
+    line-height: 2rem;
+
+  }
+.elev{
+    padding: 50px;
+}
+
+h1 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    color: #ffffff;
+    letter-spacing: 0.1em;
+    line-height: 1.2;
+    margin: 0 0 20px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #000000;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  }
+
+/* portfolio */
+.portfolio{
+    padding: 50px;
+    background-color: rgb(204, 240, 204);
+    margin: 0 auto;
+    width: calc(100% -250px);
+    height: 100vh;
+    margin-left: 250px;
+}
+
+.port_grid{
+    width: fit-content;
+    height: fit-content;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.grid{
+    width: 580px;
+    height: fit-content;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: white;
+}
+blockquote{
+    text-align: center;
+}
+
 /* On screens that are less than 700px wide, make the sidebars topbars */
 @media only screen and (max-width: 700px){
     .sidebar{ 
@@ -114,6 +195,7 @@ h3{
     }
     .sidebar a {float: left;}
     .page{margin-left: 0;}
+    .type-out{padding: 20px;}
 }
 
 /* On screens that are less than 400px */
@@ -122,5 +204,6 @@ h3{
       text-align: center;
       float: none;
     }
+    .type-out{padding: 10px;}
   }
    
