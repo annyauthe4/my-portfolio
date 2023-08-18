@@ -183,12 +183,12 @@ h3{
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: space-around;
 }
 
 .flex{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     width: auto;
     height: auto;
     gap: 20px;
@@ -197,7 +197,7 @@ h3{
 }
 
 .grid{
-    margin: 0 auto;
+    margin: 20px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     background-color: none;
     text-align: center;
@@ -213,12 +213,14 @@ h3{
 
 .graph_p{
     text-align: justify;
+    font-family: 'Raleway';
 }
 
 .img_sld{
     border: 1px solid #097264;
     width: 150px;
     height: 50px;
+    margin-top: 40px;
     border-radius: 10px;
     text-align: center;
     background-color: #097264;
