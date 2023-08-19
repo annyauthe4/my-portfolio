@@ -241,6 +241,60 @@ h3{
 /* On screens that are less than 700px wide, make the sidebars topbars */
 
 @media only screen and (max-width: 1000px){
+
+    .sidebar{
+            background: #10558d;
+            height: 250px;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        /* put the sidebar pic, h3 and p in the same div and set display to block */
+
+        .intro{
+            display: block;
+            padding-left: 10px;
+        }
+
+        .img_sb{
+            margin: 0 auto;
+        }
+
+        .sidebar ul{
+            display: flex;
+        }
+        .sidebar ul li{
+            display: flex;
+            justify-content: space-between;
+            /* gap: 100px; */
+            margin-left: 30px;
+        }
+
+        .sidebar ul li a{
+            margin: 10px auto 0;
+            padding: 5px 10px;
+            border-bottom: 1px solid #10558d;
+            color: #F8F8F8;
+            font-size: 18px;
+            position: relative;
+        }
+
+        /* .navbar ul li a{
+            color: #184253;
+        }
+        .navbar ul li a:hover{
+            background: #dee4ec;
+            color: black;
+            padding: 10px;
+        } */
+    }
+
+    iframe, .image{
+        width: 250px;
+        height: 220px;
+    }
+
     .type-out{
         padding: auto;
     }
@@ -267,11 +321,14 @@ h3{
 @media only screen and (max-width: 700px){
     .sidebar{ 
     width: 100vw;
-    height: 100vh;
+    height: 250px;
     position: relative;
-    display: block;
+    display: flex;
     }
-    .sidebar a {float: left;}
+    .container{
+        margin: 0 auto;
+    }
+    /* .sidebar a {float: left;} */
     /* .page{margin-left: 0;}
     .type-out{padding: 20px;} */
 
