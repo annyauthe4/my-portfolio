@@ -11,28 +11,37 @@
 
     <!-- Sidebar begins here -->
     <div class="container">
-        <aside class="sidebar" id="sidebar">
-            <div class="intro">
-                <img src="testing2.jpg" class="img_sb">
-                <h3>Otetumo Oluwaseun</h3>
-                <p>Software Engineer</p>
+        <header  id="sidebar">
+            <div class="navbar">
+                <div class="intro">
+                    <img src="testing2.jpg" class="img_sb">
+                    <div>
+                        <h3>Otetumo Oluwaseun</h3>
+                        <p>Software Engineer</p>
+                    </div>
+                </div>
+                <ul class="menu" id="menu">
+                    <li>
+                        <a href="#bio" class="active nav_menu" id="brown">Bio</a>
+                    </li>
+                    <li>
+                        <a href="#pitch" class="active nav_menu" id="blue">Elevator Pitch</a>
+                    </li>
+                    <li>
+                        <a href="#portfolio" class="active nav_menu" id="green">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="active nav_menu" id="green">contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="hamburger toggle-burger" id="hamburger">
+                <p>-</p>
+                <p>-</p>
+                <p>-</p>
             </div>
             
-            <ul>
-                <li>
-                    <a href="#bio" class="active nav_menu" id="brown">Bio</a>
-                </li>
-                <li>
-                    <a href="#pitch" class="active nav_menu" id="blue">Elevator Pitch</a>
-                </li>
-                <li>
-                    <a href="#portfolio" class="active nav_menu" id="green">Portfolio</a>
-                </li>
-                <li>
-                    <a href="#contact" class="active nav_menu" id="green">contact</a>
-                </li>
-            </ul>
-        </aside>
+        </header>
 
         <!-- The bio page -->
         <div class="page bio" id="bio">
@@ -106,23 +115,29 @@ function typeWriter() {
   }
 }
        typeWriter();
-    var brown, blue, green;
-    brown = document.getElementById('brown'), blue = document.getElementById('blue'), green = document.getElementById('green');
-    blue.addEventListener('click', function onClick(event) {
-        var sidebar = document.getElementById('sidebar');
+    // var brown, blue, green;
+    // brown = document.getElementById('brown'), blue = document.getElementById('blue'), green = document.getElementById('green');
+    // blue.addEventListener('click', function onClick(event) {
+    //     var sidebar = document.getElementById('sidebar');
 
-        sidebar.style.backgroundColor = '#10558d';
-    });
-    brown.addEventListener('click', function onClick(event) {
-        var sidebar = document.getElementById('sidebar');
+    //     sidebar.style.backgroundColor = '#10558d';
+    // });
+    // brown.addEventListener('click', function onClick(event) {
+    //     var sidebar = document.getElementById('sidebar');
 
-        sidebar.style.backgroundColor = 'rgb(189, 93, 56)';
-    });
+    //     sidebar.style.backgroundColor = 'rgb(189, 93, 56)';
+    // });
 
-    green.addEventListener('click', function onClick(event) {
-        var sidebar = document.getElementById('sidebar');
+    // green.addEventListener('click', function onClick(event) {
+    //     var sidebar = document.getElementById('sidebar');
 
-        sidebar.style.backgroundColor = '#097264';
-    });
+    //     sidebar.style.backgroundColor = '#097264';
+    // });
+
+    // const btn = document.getElementById('hamburger')
+    // const menu = document.getElementById('menu')
+    // btn.addEventListener('click', () => {
+    //     menu.classList.toggle('menu-toggle')
+    // })
     </script>
 </body>

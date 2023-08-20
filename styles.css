@@ -14,66 +14,95 @@ body{
 }
 
 /* Sidebar container styling */
-.sidebar{
-    background-color: rgb(189, 93, 56);
-    position: fixed;
-    width: 250px;
-    height: 100vh;
-    padding: 20px 0;
+
+#sidebar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f3f3f3;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+}
+.navbar{
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+
+}
+
+.hamburger  {
+    border: 2px solid gray;
+    border-radius: 5px;
+    padding: 2px 15px;
+    cursor: pointer;
+}
+
+.toggle-burger {
+    display: none;
+}
+
+.hamburger p {
+    margin-bottom: 0;
+    line-height: 12px;
+}
+
+.navbar .intro {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+ul.menu {
+    display: flex;
+    gap: 10px;
+
+}
+
+ul.menu li a:hover {
+    color: #000;
+    /* padding: 10px; */
+    transition: .2s;
+    
+}
+
+ul.menu li a{
+    color: rgb(118, 116, 116);
 }
 
 /* Image in side bar */
 .img_sb{
     display: block;
-    width: 200px;
-    height: 150px;
-    border-radius: 50%;
-    margin: 50px auto 10px;
+    width: 75px;
+    height: 75px;
+    border-radius: 100%;
+    object-fit: cover;
 }
 
 /* the name below sidebar pic */
 h3{
-    color: #F8F8F8;
     text-align: center;
     margin: 10px auto 5px;
     font-size: 24px;
 }
 
-/* the title below the name at sidebar */
-.sidebar p{
-    color: #F8F8F8;
-    text-align: center;
-    font-size: 16px;
-}
-
-/* The lists of bio, pitch and elevator */
-.sidebar ul li{
-    display: flex;
-    align-items: center;
-}
-
-/* the anchor tag that links the bio, pitch and elevator */
-.sidebar ul li a{
-    margin: 10px auto 0;
-    padding: 13px 30px;
-    border-bottom: 1px solid #10558d;
-    color: #F8F8F8;
-    font-size: 22px;
-    position: relative;
-}
-
 /* sidebar anchor tags hovering */
-.sidebar ul li a:hover , .sidebar ul li a:active{
+.menu li a:hover, .menu li a:active{
     color: black;
-    background-color: #F8F8F8;
+    background-color: rgb(229, 216, 198);
 }
 
+.menu li a{
+    padding: 5px;
+    font-weight: 700;
+}
 
 /* Bio page styling */
 .page{
-    width: calc(100% -250px);
+    width: 100vw;
     height: 100vh;
-    margin-left: 250px;
     display: inline-block;
     padding: 3rem 1rem;
     max-width: 75rem;
@@ -118,9 +147,7 @@ h3{
 
 /* The pitch page */
 .pitch{
-    width: calc(100% -250px);
-    height: 100vh;
-    margin-left: 250px;
+    width: 100vw;
     max-width: 75rem;
     background-color: #F8F8F8;
 }
@@ -154,7 +181,6 @@ h3{
     text-align: center;
     text-transform: uppercase;
     background-color: #F8F8F8;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
   }
   .elev{
     color: #10558d;
@@ -168,9 +194,7 @@ h3{
 .portfolio{
     background-color: #F8F8F8;
     margin: 0 auto;
-    width: calc(100% -250px);
-    height: 100vh;
-    margin-left: 250px;
+    width: 100vw;
     max-width: 75rem;
 }
 
@@ -189,22 +213,22 @@ h3{
     justify-content: space-between;
     width: auto;
     height: auto;
-    /* gap: 20px; */
     flex-wrap: wrap;
     align-items: center;
 }
 
 .grid{
     margin: 20px;
+    border: 2px solid #097264;
+    border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    background-color: none;
     text-align: center;
 }
 .image{
     width: 450px;
     height: 265px;
 }
-.graph_p, btn_a{
+.graph_p{
     width: 400px;
     height: auto;
 }
@@ -214,16 +238,14 @@ h3{
     font-family: 'Raleway';
 }
 
-.img_sld{
+.btn_a{
     border: 1px solid #097264;
-    width: 150px;
-    height: 50px;
-    margin-top: 40px;
-    border-radius: 10px;
-    text-align: center;
     background-color: #097264;
-    color: #ffffff;
-    padding: 15px 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.btn_a a{
+    color: #F8F8F8;
 }
 
 .contact{
@@ -242,57 +264,22 @@ h3{
 
 @media only screen and (max-width: 1000px){
 
-    .sidebar{
-            background: #10558d;
-            height: 250px;
-            position: relative;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    
         /* put the sidebar pic, h3 and p in the same div and set display to block */
 
         .intro{
-            display: block;
             padding-left: 10px;
         }
 
-        .img_sb{
-            margin: 0 auto;
-        }
-
-        .sidebar ul{
-            display: flex;
-        }
-        .sidebar ul li{
-            display: flex;
-            justify-content: space-between;
-            /* gap: 100px; */
-            margin-left: 30px;
-        }
-
-        .sidebar ul li a{
-            margin: 10px auto 0;
-            padding: 5px 10px;
-            border-bottom: 1px solid #10558d;
-            color: #F8F8F8;
-            font-size: 18px;
-            position: relative;
-        }
-
-        /* .navbar ul li a{
-            color: #184253;
-        }
-        .navbar ul li a:hover{
-            background: #dee4ec;
-            color: black;
-            padding: 10px;
-        } */
     }
 
     iframe, .image{
-        width: 250px;
+        width: 300px;
         height: 220px;
+    }
+
+    .graph_p{
+        width: 300px;
     }
 
     .type-out{
@@ -316,14 +303,46 @@ h3{
         width: 100vw;
     }
 
-}
+
+
 
 @media only screen and (max-width: 700px){
-    .sidebar{ 
-    width: 100vw;
-    height: 250px;
-    position: relative;
+    .navbar{ 
+    /* width: 100vw; */
+    /* height: 250px; */
+    /* position: relative; */
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+    }
+
+    .menu {
+        display: none !important ;
+        /* display: flex; */
+        flex-direction: column;
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    } 
+    ul.menu li {
+    padding: 10px 10px;
+
+    }
+    ul.menu li a{
+    color: #000
+
+    }
+
+    .menu-toggle {
+        display: block !important;
+    }
+
+    .side2 {
+
+    }
+
+    .toggle-burger {
+        display: block;
+        align-self: flex-start;
     }
     .container{
         margin: 0 auto;
@@ -331,27 +350,6 @@ h3{
     /* .sidebar a {float: left;} */
     /* .page{margin-left: 0;}
     .type-out{padding: 20px;} */
-
-    .page{
-        width: 100vw;
-        margin: 0 auto;
-        display: block;
-        padding: auto;
-    }
-
-    .pitch{
-        width: 100vw;
-        margin: 0 auto;
-        padding: auto;
-        overflow: auto;
-    }
-
-    .portfolio{
-        width: 100vw;
-        margin: 0 auto;
-        padding: auto;
-        overflow: auto;
-    }
 
     #bio_name{
         text-align: center;
